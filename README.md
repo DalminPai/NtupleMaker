@@ -25,7 +25,7 @@
 	# -- ntuple maker -- #
 	git clone https://github.com/KyeongPil-Lee/NtupleMaker.git Phys
 	cd Phys
-	git checkout [tag]
+	git checkout v2.0-METCorr
 	cd ..
 
 	# -- copy the MET correction recipe (80X) -- #
