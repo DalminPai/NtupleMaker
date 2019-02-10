@@ -17,8 +17,11 @@
 	git clone -b Moriond17_gainSwitch_unc https://github.com/ECALELFS/ScalesSmearings.git
 	cd $CMSSW_BASE/src
 
-	# -- this ntuple maker -- #
-	git clone https://github.com/KyeongPil-Lee/NtupleMaker.git Phys -b 80X
+	# -- ntuple maker -- #
+	git clone https://github.com/KyeongPil-Lee/NtupleMaker.git Phys
+	cd Phys
+	git checkout v1.1.1-EGMCorr_noHEEPID_AddInstruction
+	cd ..
 
 	# -- compile -- #
 	scram b -j 20 >&log&
