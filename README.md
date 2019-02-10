@@ -27,8 +27,11 @@
 	mkdir -p ../external/slc6_amd64_gcc530/data/RecoEgamma/ElectronIdentification/ #we need this for the mva weights which runs in VID regardless if you need it or not
 	git clone https://github.com/cms-data/RecoEgamma-ElectronIdentification ../external/slc6_amd64_gcc530/data/RecoEgamma/ElectronIdentification/data #we need this for the mva weights which runs in VID regardless if you need it or not
 
-	# -- this ntuple maker -- #
-	git clone https://github.com/KyeongPil-Lee/NtupleMaker.git Phys -b 80X
+	# -- ntuple maker -- #
+	git clone https://github.com/KyeongPil-Lee/NtupleMaker.git Phys
+	cd Phys
+	git checkout v1.1-EGMCorr_noHEEPID
+	cd ..
 
 	# -- compile -- #
 	scram b -j 20 >&log&
